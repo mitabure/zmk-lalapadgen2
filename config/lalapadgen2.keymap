@@ -52,6 +52,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        
+        plus_kpplus: plus_kpplus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_KPPLUS";
+            bindings = <&kp COLON>, <&kp KP_PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
+        minus_kpminus: minus_kpminus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_KPMINUS";
+            bindings = <&kp MINUS>, <&kp KP_MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
+        aster_kpaster: aster_kpaster {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ASTER_KPASTER";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp KP_ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
+        div_kpdiv: div_kpdiv {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DIV_KPDIV";
+            bindings = <&kp SLASH>, <&kp KP_DIVIDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -87,10 +123,10 @@
         SECONDARY_LAYER {
             display-name = "secondary_layer";
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp KP_NUMLOCK    &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
-&kp NUMBER_6      &kp N7             &kp N8        &kp N9        &kp N0                    &none             &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp F6            &kp F7             &kp F8        &kp F9        &kp F10                   &kp UNDER         &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK
-&trans            &trans             &trans        &trans        &trans   &trans  &kp DEL  &trans            &trans             &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_DIVIDE
+&kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp KP_NUMLOCK    &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &plus_kpplus
+&kp NUMBER_6      &kp N7             &kp N8        &kp N9        &kp N0                    &none             &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &minus_kpminus
+&kp F6            &kp F7             &kp F8        &kp F9        &kp F10                   &kp UNDER         &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &aster_kpaster
+&trans            &trans             &trans        &trans        &trans   &trans  &kp DEL  &trans            &trans             &kp KP_NUMBER_0  &kp KP_DOT       &div_kpdiv
                   &trans             &trans        &trans        &trans   &trans  &trans   &trans            &trans             &trans           &trans
 &trans            &trans             &trans                                                                                     &trans           &trans           &trans
 &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans        &trans        &trans                    &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans           &trans           &trans
