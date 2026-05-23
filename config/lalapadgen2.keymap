@@ -52,7 +52,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        
+
         plus_kpplus: plus_kpplus {
             compatible = "zmk,behavior-mod-morph";
             label = "PLUS_KPPLUS";
@@ -61,7 +61,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        
+
         minus_kpminus: minus_kpminus {
             compatible = "zmk,behavior-mod-morph";
             label = "MINUS_KPMINUS";
@@ -70,7 +70,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        
+
         aster_kpaster: aster_kpaster {
             compatible = "zmk,behavior-mod-morph";
             label = "ASTER_KPASTER";
@@ -79,7 +79,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        
+
         div_kpdiv: div_kpdiv {
             compatible = "zmk,behavior-mod-morph";
             label = "DIV_KPDIV";
@@ -101,6 +101,11 @@
         COMBO_TAB {
             bindings = <&kp TAB>;
             key-positions = <10 11>;
+        };
+
+        COMBO_AT {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <18 19>;
         };
     };
 
